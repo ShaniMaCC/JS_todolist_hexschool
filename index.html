@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <title>toDoList</title>
 </head>
 <body>
-    <h1>TO-DO LIST</h1>
-    <input type="text" class="txt" >
-    <input type="button" value="Save" class="save">
-    <ul class="list">
+    <div class="header container mt-6 mb-3">
+       <h1 class="title">TODO LIST</h1>
+        <input type="text" class="txt" placeholder="  新增待辦事項" >
+        <input type="button" value="＋" class="save"> 
+    </div>
+    <div class="card container mt-1">
+        <div class="btns pt-2 pb-2">
+            <input type="button" value="全部" class="all focus">
+            <input type="button" value="待完成" class="undo">
+            <input type="button" value="已完成" class="done">
+        </div>
+        <ul class="list mb-3 mt-2">
+            <li class="list-item"><input id="check" class="checkbox" type="checkbox" data-status="待完成" data-num=0><label for="check">吃飯</label>
+            <input type="image" src="https://hexschool.github.io/js-todo/assets/cancel.jpg" alt="delete" class="delete" data-num=0></li>
+            <li class="list-item"><input id="check" class="checkbox" type="checkbox" data-status="待完成" data-num=0><label for="check">喝水</label>
+            <input type="image" src="https://hexschool.github.io/js-todo/assets/cancel.jpg" alt="delete" class="delete" data-num=0></li>
+            <li class="list-item"><input id="check" checked class="checkbox" type="checkbox" data-status="已完成" data-num=0><label for="check">睡覺</label>
+            <input type="image" src="https://hexschool.github.io/js-todo/assets/cancel.jpg" alt="delete" class="delete" data-num=0></li>
+
+        </ul>
+        <div class="footer pb-4">
+            <span>0個待完成項目</span>
+            <input type="button" value="清除已完成項目">
+        </div>
+    </div>
+   
         
-    </ul>
+
     
     <script src="all.js"></script>
 </body>
